@@ -28,6 +28,14 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        .love-letter {
+            margin-top: 20px;
+            font-size: 18px;
+            font-style: italic;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -35,10 +43,23 @@
     <p>You are the peanut butter to my jelly, the sun to my sky, and the WiFi to my phone! 📱💕</p>
     <p class="heart">💖</p>
     <button class="btn" onclick="showSurprise()">Click for a Surprise!</button>
-    <p id="surprise" style="display:none; font-size:20px; margin-top:20px;">You are the best thing that ever happened to me! 💕 - Love, Aditya</p>
+    <p id="surprise" class="hidden" style="font-size:20px; margin-top:20px;">You are the best thing that ever happened to me! 💕 - Love, Ayush</p>
+    
+    <audio autoplay loop>
+        <source src="love-song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="love-letter">
+        <h2>My Love Letter to You ❤️</h2>
+        <p>Dear Vanshu,</p>
+        <p>Every moment with you is a blessing. You make my world brighter and my heart happier. I promise to always be by your side, loving and cherishing you forever. 💕</p>
+        <p>Love, Ayush</p>
+    </div>
+    
     <script>
         function showSurprise() {
-            document.getElementById('surprise').style.display = 'block';
+            document.getElementById('surprise').classList.remove('hidden');
         }
     </script>
 </body>
